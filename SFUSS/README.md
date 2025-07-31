@@ -1,29 +1,79 @@
-# 📁 File Upload API
+# File Upload API
 
-API REST para upload e recuperação de ficheiros de vários tipos, com metadados armazenados no MongoDB.
+Este projeto é uma API Node.js com Express para o upload e recuperação de ficheiros. Utiliza MongoDB para armazenar metadados e permite que os utilizadores carreguem ficheiros de diferentes tipos.
 
----
-## 🚀 Funcionalidades
+## 🔗 Descrição do Desafio
 
-- ✅ Upload de ficheiros de diferentes tipos (PDF, imagens, etc.)
-- ✅ Recuperação de ficheiros via identificador único
-- ✅ Armazenamento de metadados no MongoDB:
-  - Nome do ficheiro
-  - Tamanho
-  - Tipo MIME
-  - Data de upload
-- ✅ Limitação de tamanho de ficheiros
-- ✅ Mensagens de erro informativas
+- **Submeta a URL do repositório e o link de demonstração.**
+- **Como utilizador:**
+  - Quero carregar ficheiros de vários tipos para o serviço.
+  - Quero recuperar os meus ficheiros carregados usando um identificador único.
+  - Quero receber mensagens de erro informativas se o carregamento falhar.
+- **Como programador:**
+  - O serviço deve lidar com vários tipos de ficheiros de forma eficiente.
+  - O serviço deve limitar o tamanho do ficheiro para evitar abusos.
+  - Metadados como nome do ficheiro, tamanho e hora de carregamento devem ser armazenados e facilmente acessíveis.
+  - Identificadores únicos devem ser atribuídos para evitar colisões de nomes.
 
----
-
-## 🛠️ Tecnologias usadas
+## 🚀 Tecnologias Utilizadas
 
 - Node.js
-- Express.js
-- MongoDB + Mongoose
-- Multer (para upload)
-- Dotenv
+- Express
+- MongoDB
+- Multer
+- TypeScript
+
+## 📁 Estrutura de Pastas
+
+```
+├── controllers
+│   └── file.controller.ts
+├── middleware
+│   └── upload.ts
+├── routes
+│   └── file.routes.ts
+├── models
+│   └── file.model.ts
+├── app.ts
+├── server.ts
+└── README.md
+```
+
+## 📦 Instalação
+
+```bash
+npm install
+```
+
+## ▶️ Como Executar
+
+```bash
+npm run dev
+```
+
+## 🔄 Rotas da API
+
+```ts
+
+fileRouter.post('/post', uploding.single('file'), uploadfile.createFileUpload.bind(uploadfile));
+fileRouter.get('/get', uploadfile.getAllFiles.bind(uploadfile));
+fileRouter.get('/get-by-id/:_id', uploadfile.getFileByID.bind(uploadfile));
+```
+
+## 🧪 Teste
+
+Utilize o [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.com/) para testar as rotas:
+
+- **POST /post**: Enviar ficheiro com form-data (chave `file`)
+- **GET /get**: Listar todos os ficheiros
+- **GET /get-by-id/:\_id**: Recuperar ficheiro por ID
+
+## 📤 Demonstração
+
+- **Repositório:** [link-do-repositório-aqui](#)
+- **Demo:** [link-da-demo-aqui](#)
 
 ---
+
+Feito com ❤️ por Elina Tsovo
 
