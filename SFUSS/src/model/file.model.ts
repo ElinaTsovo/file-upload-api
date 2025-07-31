@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { IUpload } from "../../utils/interface";
+import { IUpload } from "../utils/interface";
 import { v4 as uuidv4 } from "uuid";
 
 const UploadSchema = new Schema<IUpload>(

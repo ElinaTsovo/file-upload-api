@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fileRouter = void 0;
+const express_1 = require("express");
+const file_controller_1 = require("../controllers/file.controller");
+const upload_1 = require("../middleware/upload");
+exports.fileRouter = (0, express_1.Router)();
+const uploadfile = new file_controller_1.UploadFile();
+exports.fileRouter.post('/post', upload_1.uploding.single('file'), uploadfile.createFileUpload.bind(uploadfile));
+exports.fileRouter.get('/get', upload_1.uploding.single('file'), uploadfile.getAllFiles.bind(uploadfile));
+exports.fileRouter.get('/get-by-id/:_id', upload_1.uploding.single('file'), uploadfile.getFileByID.bind(uploadfile));
