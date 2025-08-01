@@ -70,8 +70,8 @@ Utilize o [Insomnia](https://insomnia.rest/) ou [Postman](https://www.postman.co
 
 ## 📤 Demonstração
 
-- **Repositório:** [link-do-repositório-aqui](#)
-- **Demo:** [link-da-demo-aqui](#)
+- **Repositório:** [https://github.com/ElinaTsovo/file-upload-api/tree/master/SFUSS](#)
+- **Demo:** [Não estou a conseguir fazer deploy😭😭💔💔](#)
 
 ---
 
